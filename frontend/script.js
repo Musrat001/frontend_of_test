@@ -7,13 +7,15 @@ async function getUsers() {
             "https://test-9wr7.onrender.com/users"
         );
 
-        const data = await response.json();
-        console.log(data);
+        console.log("status:", response.status);
 
+        const data = await response.json();
+
+        console.log(data);
 
     } catch (error) {
 
-        console.log(error);
+        console.log("error:", error);
 
     }
 
@@ -54,7 +56,6 @@ form.addEventListener("submit", async (e) => {
 const getAlluserBtn = document.getElementById("getAllusers");
 getAlluserBtn.addEventListener("click", (e) => {
     e.preventDefault();
-
     getUsers();
 })
 
