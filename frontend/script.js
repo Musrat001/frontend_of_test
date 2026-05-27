@@ -19,7 +19,8 @@ form.addEventListener("submit", async (e) => {
     const userData = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
-        password: document.getElementById("password").value
+        password: document.getElementById("password").value,
+        password: document.getElementById("user_name").value,
     };
 
     const response = await fetch(
