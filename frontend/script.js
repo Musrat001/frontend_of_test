@@ -1,12 +1,31 @@
 
 async function getUsers() {
+
     try {
-        const response = await fetch("https://test-9wr7.onrender.com/users");
+
+        const response = await fetch(
+            "https://test-9wr7.onrender.com/users"
+        );
+
         const data = await response.json();
-        // console.log(data);
+
+        const usersDiv = document.getElementById("users");
+
+        data.users.forEach((user) => {
+
+            usersDiv.innerHTML += `
+                <h3>${user.name}</h3>
+                <p>${user.email}</p>
+            `;
+
+        });
+
     } catch (error) {
-        console.error(error);
+
+        console.log(error);
+
     }
+
 }
 
 
