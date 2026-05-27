@@ -41,7 +41,14 @@ form.addEventListener("submit", async (e) => {
 });
 
 
-getUsers();
+const getAlluserBtn = document.getElementById("getAllusers").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    getUsers();
+})
+
+
+
 
 
 
