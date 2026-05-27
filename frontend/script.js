@@ -60,12 +60,12 @@ form.addEventListener("submit", async (e) => {
 });
 
 
-const getAlluserBtn = document.getElementById("getAllusers");
-getAlluserBtn.addEventListener("click", (e) => {
-    e.preventDefault();
+// const getAlluserBtn = document.getElementById("getAllusers");
+// getAlluserBtn.addEventListener("click", (e) => {
+//     e.preventDefault();
 
-    getUsers();
-})
+//     getUsers();
+// })
 
 
 
