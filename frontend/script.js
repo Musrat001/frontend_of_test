@@ -8,17 +8,8 @@ async function getUsers() {
         );
 
         const data = await response.json();
+        console.log(data);
 
-        const usersDiv = document.getElementById("users");
-
-        data.users.forEach((user) => {
-
-            usersDiv.innerHTML += `
-                <h3>${user.name}</h3>
-                <p>${user.email}</p>
-            `;
-
-        });
 
     } catch (error) {
 
