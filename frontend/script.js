@@ -1,15 +1,44 @@
 
 async function getUsers() {
     try {
-        const response = await fetch("http://localhost:2026/users");
+        const response = await fetch("https://test-9wr7.onrender.com/users");
         const data = await response.json();
-        alert(data.message);
-
         // console.log(data);
     } catch (error) {
         console.error(error);
     }
 }
+
+
+const form = document.getElementById("registerForm");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const userData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+    };
+
+    const response = await fetch(
+        "https://test-9wr7.onrender.com/register",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userData)
+        }
+    );
+
+    const data = await response.json();
+
+    console.log(data);
+
+});
+
 
 getUsers();
 
