@@ -1,25 +1,25 @@
 
-async function getUsers() {
+// async function getUsers() {
 
-    try {
+//     try {
 
-        const response = await fetch(
-            "https://test-9wr7.onrender.com/users"
-        );
+//         const response = await fetch(
+//             "https://test-9wr7.onrender.com/users"
+//         );
 
-        console.log("status:", response.status);
+//         console.log("status:", response.status);
 
-        const data = await response.json();
+//         const data = await response.json();
 
-        console.log(data);
+//         console.log(data);
 
-    } catch (error) {
+//     } catch (error) {
 
-        console.log("error:", error);
+//         console.log("error:", error);
 
-    }
+//     }
 
-}
+// }
 
 
 const form = document.getElementById("registerForm");
@@ -32,7 +32,7 @@ form.addEventListener("submit", async (e) => {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         password: document.getElementById("password").value,
-        password: document.getElementById("user_name").value,
+        user_name: document.getElementById("user_name").value,
     };
 
     const response = await fetch(
@@ -53,10 +53,11 @@ form.addEventListener("submit", async (e) => {
 });
 
 
-const getAlluserBtn = document.getElementById("getAllusers");
+const getAlluserBtn = document.getElementById("getAllUsers");
 getAlluserBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    getUsers();
+    // getUsers();
+    window.location.href = "https://test-9wr7.onrender.com/users";
 })
 
 
